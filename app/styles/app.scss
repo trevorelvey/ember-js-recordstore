@@ -1,0 +1,42 @@
+// ********************* STICKY FOOTER
+.ember-application {
+  margin: 0px;
+}
+
+.ember-view {
+  height: 100%;
+}
+
+.window {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.buffer {
+  height: 60px;
+}
+
+footer {
+  clear: both;
+  height:40px;
+  position: fixed;
+  bottom: 0;
+  background-color: #333;
+  width: 100%;
+  color: #d43f3a;
+}
+
+// ************************* BANNER
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  min-height: 100px;
+  max-height: 200px;
+  background: #333;
+  color: #d43f3a;
+}
