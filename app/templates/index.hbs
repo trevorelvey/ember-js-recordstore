@@ -1,1 +1,5 @@
-{{outlet}}
+<ul>
+  {{#each model as |record|}}
+  <li>{{record.title}}</li>
+  {{/each}}
+</ul>

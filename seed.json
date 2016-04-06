@@ -1,0 +1,43 @@
+{ "records": [{
+    "title": "Malibu",
+    "artist": "0",
+    "genre": "R&B",
+    "popularity": 0
+  },{
+    "title": "Felt",
+    "artist": "1",
+    "genre": "Contemporary Classical",
+    "popularity": 0
+  },{
+    "title": "America Religious",
+    "artist": "2",
+    "genre": "Folk",
+    "popularity": 0
+  },{
+    "title": "Is The Is Are",
+    "artist": "3",
+    "genre": "Shoegaze",
+    "popularity": 0
+  }],
+  "artists": [{
+    "title": "Anderson Paak.",
+    "albums": {
+      "0": true
+    }
+  },{
+    "title": "Nils Frahm",
+    "albums": {
+      "1": true
+    }
+  },{
+    "title": "Caroline Rose",
+    "albums": {
+      "2": true
+    }
+  },{
+    "title": "DIIV",
+    "albums": {
+      "3": true
+    }
+  }]
+}
