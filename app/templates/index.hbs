@@ -1,9 +1,5 @@
-<ul>
-  {{#each model as |record|}}
-  <li>{{record.title}}<br>
-    {{record.artist}}<br>
-    {{record.genre}}<br>
-    {{record.price}}
-  </li>
-  {{/each}}
-</ul>
+{{#each model as |record|}}
+  {{record-tile record=record}}
+{{/each}}
+<br><br>
+{{display-cart record=record}}

@@ -1,0 +1,10 @@
+{{record.title}}<br>
+{{record.artist.name}}<br>
+{{record.genre}}<br>
+{{record.price}}
+
+{{#if record.inCart}}
+  <p>already in cart</p>
+{{else}}
+  <button {{action 'addToCart' record}}>Add to Cart</button>
+{{/if}}
