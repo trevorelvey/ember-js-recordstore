@@ -8,8 +8,8 @@
       </div>
 
       <div class="form-group">
-        <label for="artist">Artist</label>
-        {{input value=artist id="artist"}}
+        <label for="artist">Artist</label>:
+        {{selectedArtist.name}}
       </div>
 
       <div class="form-group">
@@ -28,9 +28,9 @@
 {{else}}
   <button {{action 'recordFormShow'}}>Add Record</button>
   {{#x-select value=artist action="selectArtist"}}
+    {{#x-option}}{{/x-option}}
     {{#each artists as |artist|}}
       {{#x-option value=artist}}{{artist.name}}{{/x-option}}
     {{/each}}
-    {{#x-option}}{{/x-option}}
   {{/x-select}}
 {{/if}}

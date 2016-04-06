@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewRecord: false,
-  selectedArtist: "",
+  selectedArtist: null,
   actions: {
     recordFormShow() {
       this.set('addNewRecord', true);
@@ -11,18 +11,22 @@ export default Ember.Component.extend({
       var params = {
         artist: this.get('artist')
       };
+      console.log(params.artist.get('name'));
       this.set('selectedArtist', params.artist);
       this.set('addNewRecord', true);
     },
     save() {
       var params = {
         title: this.get('title'),
-        artist: this.get('artist'),
         genre: this.get('genre'),
-        price: this.get('price')
+        price: this.get('price'),
+        artist: this.selectedArtist
       };
       this.set('addNewRecord', false);
       this.sendAction('save', params);
+      this.set('title', '');
+      this.set('genre', '');
+      this.set('price', '');
     }
   }
 });

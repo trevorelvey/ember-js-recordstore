@@ -1,0 +1,14 @@
+<h1>Add Artist</h1>
+{{#if addNewArtist}}
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name"}}
+      </div>
+      <button {{action 'save'}}>Save Artist</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'artistFormShow'}}>Add Record</button>
+{{/if}}
