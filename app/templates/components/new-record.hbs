@@ -1,0 +1,36 @@
+<h1>Add Record</h1>
+{{#if addNewRecord}}
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="title">Record Title</label>
+        {{input value=title id="title"}}
+      </div>
+
+      <div class="form-group">
+        <label for="artist">Artist</label>
+        {{input value=artist id="artist"}}
+      </div>
+
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        {{input value=genre id="genre"}}
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        {{input value=price id="price"}}
+      </div>
+
+      <button {{action 'save'}}>Save Record</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'recordFormShow'}}>Add Record</button>
+  {{#x-select value=artist action="selectArtist"}}
+    {{#each artists as |artist|}}
+      {{#x-option value=artist}}{{artist.name}}{{/x-option}}
+    {{/each}}
+    {{#x-option}}{{/x-option}}
+  {{/x-select}}
+{{/if}}

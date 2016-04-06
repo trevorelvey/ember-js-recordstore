@@ -1,5 +1,9 @@
 <ul>
   {{#each model as |record|}}
-  <li>{{record.title}}</li>
+  <li>{{record.title}}<br>
+    {{record.artist}}<br>
+    {{record.genre}}<br>
+    {{record.price}}
+  </li>
   {{/each}}
 </ul>

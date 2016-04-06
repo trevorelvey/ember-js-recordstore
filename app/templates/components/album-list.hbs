@@ -1,0 +1,6 @@
+<ul>
+  {{#each records as |record|}}
+    {{record-details record=record}}
+    {{delete-record record=record deleteRecord='deleteRecord'}}
+  {{/each}}
+</ul>
