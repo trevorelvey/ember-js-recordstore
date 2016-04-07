@@ -2,13 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   shoppingCart: Ember.inject.service(),
-  cartTotal: Ember.computed(function() {
-    var cartTotal = 0;
-    for (let record of 'shoppingCart') {
-      console.log(record);
-    }
-    return cartTotal;
-  }),
 
   actions: {
     removeFromCart(record) {
@@ -17,6 +10,10 @@ export default Ember.Component.extend({
     },
     emptyCart() {
       this.get('shoppingCart').empty();
+    },
+    checkout() {
+      this.sendAction('upPopularity');
+      this.get('shoppingCart').checkout();
     }
   }
 });

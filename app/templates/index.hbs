@@ -1,5 +1,6 @@
+{{shoppingCart.cartTotal}}
 {{#each model as |record|}}
   {{record-tile record=record}}
 {{/each}}
 <br><br>
-{{display-cart record=record}}
+{{display-cart record=record upPopularity='upPopularity'}}

@@ -3,5 +3,11 @@
   <button {{action 'removeFromCart' record}}>Remove from Cart</button>
 {{/each}}
 <button {{action 'emptyCart' record}}>Empty Cart</button>
+<button {{action 'checkout' record}}>checkout</button>
+
 
 {{shoppingCart.cartTotal}}
+
+{{#if shoppingCart.checkedOut}}
+  <p>Checkout Successful!</p>
+{{/if}}
