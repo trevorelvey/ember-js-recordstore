@@ -1,0 +1,9 @@
+<h1>{{model.record.title}} <span id="by">-</span> {{model.record.artist.name}}</h1> - <h4>${{model.record.price}}</h4>
+<img id="album-art" src="{{model.record.image}}" alt="album art for {{model.record.title}}" />
+<p id="record-description">{{model.record.description}}</p>
+
+{{#if model.record.inCart}}
+  <p>Added to Cart</p>
+{{else}}
+  <button {{action 'addToCart' model.record}}>Add to Cart</button>
+{{/if}}

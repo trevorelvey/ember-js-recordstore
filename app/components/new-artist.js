@@ -15,7 +15,7 @@ export default Ember.Component.extend({
       if (this.get('name') !== undefined) {
         this.sendAction('save', params);
       } else {
-        alert("You did not put in a valid artist name.")
+        alert("You did not put in a valid artist name.");
       }
       this.set('name', '');
     }
