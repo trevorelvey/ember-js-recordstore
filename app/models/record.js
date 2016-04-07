@@ -7,6 +7,8 @@ export default DS.Model.extend({
   genre: DS.attr(),
   popularity: DS.attr('number', {defaultValue: 0}),
   price: DS.attr(),
+  image: DS.attr(),
+  description: DS.attr(),
 
   shoppingCart: ember.inject.service(),
   inCart: ember.computed('shoppingCart.records.[]', function() {

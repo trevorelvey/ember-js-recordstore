@@ -1,45 +1,40 @@
-<h1>Add Record</h1>
-{{#if addNewRecord}}
+
+{{#if editForm}}
   <div>
     <form>
       <div class="form-group">
         <label for="artist">Artist</label>:
-        {{selectedArtist.name}}
+        {{record.artist.name}}
       </div>
 
       <div class="form-group">
         <label for="title">Record Title</label>
-        {{input value=title id="title"}}
+        {{input value=record.title id="title"}}
       </div>
 
       <div class="form-group">
         <label for="genre">Genre</label>
-        {{input value=genre id="genre"}}
+        {{input value=record.genre id="genre"}}
       </div>
 
       <div class="form-group">
         <label for="price">Price</label>
-        {{input value=price id="price"}}
+        {{input value=record.price id="price"}}
       </div>
 
       <div class="form-group">
         <label for="image">Image URL</label>
-        {{input value=image id="image"}}
+        {{input value=record.image id="image"}}
       </div>
 
       <div class="form-group">
         <label for="description">Description</label>
-        {{input value=description id="description"}}
+        {{input value=record.description id="description"}}
       </div>
 
-      <button {{action 'save'}}>Save Record</button>
+      <button {{action 'update' record}}>Update Record</button>
     </form>
   </div>
 {{else}}
-  {{#x-select value=artist action="selectArtist"}}
-    {{#x-option}}{{/x-option}}
-    {{#each artists as |artist|}}
-      {{#x-option value=artist}}{{artist.name}}{{/x-option}}
-    {{/each}}
-  {{/x-select}}
+  <button {{action 'editForm'}}>Edit Info</button>
 {{/if}}

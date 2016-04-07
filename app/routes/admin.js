@@ -27,6 +27,15 @@ export default Ember.Route.extend({
       var newArtist = this.store.createRecord('artist', params);
       newArtist.save();
       this.transitionTo('admin');
+    },
+    update(record, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !== undefined) {
+          record.set(key, params[key]);
+        }
+      });
+      record.save();
+      this.transitionTo('admin');
     }
   }
 });

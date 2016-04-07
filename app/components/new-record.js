@@ -20,13 +20,17 @@ export default Ember.Component.extend({
         title: this.get('title'),
         genre: this.get('genre'),
         price: this.get('price'),
-        artist: this.selectedArtist
+        artist: this.selectedArtist,
+        image: this.get('image'),
+        description: this.get('description'),
       };
       this.set('addNewRecord', false);
       this.sendAction('save', params);
       this.set('title', '');
       this.set('genre', '');
       this.set('price', '');
+      this.set('image', '');
+      this.set('description', '');
     }
   }
 });
