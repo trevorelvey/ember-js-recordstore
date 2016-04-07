@@ -1,5 +1,8 @@
 {{shoppingCart.cartTotal}}
-{{#each model as |record|}}
+
+{{record-list records=model}}
+
+{{#each sortedRecords as |record|}}
   {{record-popularity record}}{{record-tile record=record}}
 {{/each}}
 <br><br>
