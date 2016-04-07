@@ -12,7 +12,11 @@ export default Ember.Component.extend({
       };
 
       this.set('addNewArtist', false);
-      this.sendAction('save', params);
+      if (this.get('name') !== undefined) {
+        this.sendAction('save', params);
+      } else {
+        alert("You did not put in a valid artist name.")
+      }
       this.set('name', '');
     }
   }
