@@ -3,6 +3,14 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   records: [],
 
+  cartTotal: Ember.computed('records.length', function() {
+    var cartTotal = 0;
+    for (let total of this.get('records')){
+      cartTotal += parseInt(total.get('price'));
+    }
+    return cartTotal;
+  }),
+
   add(record) {
     this.get('records').pushObject(record);
   },
