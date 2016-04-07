@@ -1,15 +1,21 @@
-<div class="window">
-  <div class="banner">
-    <h1>Records</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">{{#link-to 'index'}}Record Store{{/link-to}}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>{{#link-to 'cart'}}cart{{/link-to}}</li>
+      </ul>
+    </div>
   </div>
-  {{nav-bar}}
+</nav>
 
-  <div class="container">
-    {{outlet}}
-  </div>
-  <div class="buffer">
+<div class="container">
+  {{outlet}}
+</div>
+<div class="buffer">
 
-  </div>
 </div>
 <footer>
   <p>© Tyler Suderman & Trevor Elvey 2016</p>
