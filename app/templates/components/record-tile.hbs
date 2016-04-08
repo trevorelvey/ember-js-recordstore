@@ -1,7 +1,11 @@
+<img id="album-art" src="{{record.image}}" alt="album art for {{record.title}}"/>
 <h3>{{#link-to 'record' record.id}}{{record.title}}{{/link-to}}</h3>
+<h4>by {{record.artist.name}}</h4>
+<h4>${{record.price}}</h4>
+
 
 {{#if record.inCart}}
   <p></p>
 {{else}}
-  <button {{action 'addToCart' record}}>Add to Cart</button>
+  <button class="btn" {{action 'addToCart' record}}>Add to Cart</button>
 {{/if}}

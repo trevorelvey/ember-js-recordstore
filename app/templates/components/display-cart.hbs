@@ -1,9 +1,9 @@
 {{#each shoppingCart.records as |record|}}
   {{record.title}} -- {{record.price}}
-  <button {{action 'removeFromCart' record}}>Remove from Cart</button>
+  <button class="btn" {{action 'removeFromCart' record}}>Remove from Cart</button>
 {{/each}}
-<button {{action 'emptyCart' record}}>Empty Cart</button>
-<button {{action 'checkout' record}}>checkout</button>
+<button class="btn" {{action 'emptyCart' record}}>Empty Cart</button>
+<button class="btn" {{action 'checkout' record}}>checkout</button>
 
 
 {{shoppingCart.cartTotal}}

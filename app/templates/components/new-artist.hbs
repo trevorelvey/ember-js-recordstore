@@ -6,9 +6,9 @@
         <label for="name">Name</label>
         {{input value=name id="name"}}
       </div>
-      <button {{action 'save'}}>Save Artist</button>
+      <button class="btn" {{action 'save'}}>Save Artist</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'artistFormShow'}}>Add Artist</button>
+  <button class="btn" {{action 'artistFormShow'}}>Add Artist</button>
 {{/if}}

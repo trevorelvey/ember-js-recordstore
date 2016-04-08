@@ -1,0 +1,7 @@
+-Grid style display of albums (album cover with info underneath)
+-click upon modals for album details/add to cart
+-drop down cart
+-store locations
+-style buttons
+-download sample images into file and link
+-move popularity into record-tile

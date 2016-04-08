@@ -32,9 +32,9 @@
         {{input value=record.description id="description"}}
       </div>
 
-      <button {{action 'update' record}}>Update Record</button>
+      <button class="btn" {{action 'update' record}}>Update Record</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'editForm'}}>Edit Info</button>
+  <button class="btn" {{action 'editForm'}}>Edit Info</button>
 {{/if}}
